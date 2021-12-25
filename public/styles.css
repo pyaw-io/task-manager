@@ -1,0 +1,78 @@
+body {
+  background-image: linear-gradient(#6495ed, #edebf7)
+}
+
+.input-box {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border: solid 1px none;
+  padding: 2rem;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.task {
+  background-color: rgb(247, 247, 248);
+}
+
+.item {
+  margin-bottom: 2rem;
+  border: solid 1px none;
+  padding: 1rem;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item:hover {
+  box-shadow: 0.5em 0.5em 0.95em rgba(0, 0, 0, 0.459);
+}
+
+.item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item > div > p {
+  margin: 0;
+  padding: 0 10px;
+}
+.item > div > a {
+  margin: 0 5px;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: black;
+}
+
+.icon-btn {
+  background-color: transparent;
+  padding: 0;
+  margin: 8px;
+  border: none;
+}
+
+.task-id {
+  display: flex;
+}
+
+.container{
+  background-color: blanchedalmond;
+  border-radius: 0.5rem;
+}
+.footer{
+  margin: auto;
+  padding-top: 6rem;
+  text-align: center;
+  
+
+}

@@ -1,0 +1,52 @@
+<%- include('./partials/header.ejs') %>
+<div class="container col-5 input-box">
+  <h4 class="title">Task Manager</h4>
+
+  <form
+    action="/"
+    method="post"
+    class="row row-cols-lg-auto align-items-center"
+  >
+    <div class="col-12">
+      <label class="visually-hidden" for="task">Task</label>
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control task"
+          name="newTask"
+          id="task"
+          placeholder="Eg. Go grocery shopping"
+        />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+  </form>
+</div>
+
+<% task.forEach( (item,i) => { %>
+<div class="container col-5 item">
+  <div>
+    <input type="checkbox" name="checkbox" value="" />
+    <p><%=item.task%></p>
+  </div>
+  <div>
+    <form action="/editlink" method="post">
+      <input type="hidden" name="taskId" value="<%= item._id %>" />
+      <button type="submit" class="icon-btn">
+        <i class="fas fa-edit"></i>
+      </button>
+    </form>
+    <form action="/delete" method="post">
+      <input type="hidden" name="delete" value="<%=item._id%>" />
+      <button type="submit" class="icon-btn">
+        <i class="fas fa-trash"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<%})%> 
+<%- include('./partials/footer.ejs') %>
