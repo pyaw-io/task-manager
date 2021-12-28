@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 3000
 
 const app = express();
 app.use(express.static("public"));
@@ -122,6 +123,6 @@ app.post("/editlink",(req,res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:3000`);
 });
